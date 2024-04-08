@@ -1,0 +1,8 @@
+spartak.by Xpathes
+
+Spartak logo
+//img[@alt='логотип Спартак']
+//img[@title='Спартак']
+
+"Информация для партнеров"
+//a[@class='has_child']/span[text()='Информация для партнеров']
