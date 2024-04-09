@@ -1,0 +1,41 @@
+mail.ru Xpathes
+
+mail logo
+//a[@data-testid='whiteline-logo-item']
+//img[@class='ph-logo__img svelte-18tlzaw']
+
+"Облако" button
+//a[contains(text(),'Облако')]
+//a[@data-click-counter='406830646, 61021856']
+
+"Регистрация" button
+//a[contains(text(),'Регистрация')]
+//a[@data-click-counter='75068995']
+
+"Найти" button
+//button[contains(text(),'Найти')]
+//button[@data-testid='search-button']
+
+"Леди" button
+//a[contains(text(),'Леди')]
+//a[@href='//lady.mail.ru/']
+
+"Леди" button
+//a[contains(text(),'Леди')]
+//a[@href='//lady.mail.ru/']
+
+News title
+//span[contains(text(),'Главные ново')]
+//li/div/a/span[@class='news-item-link__text cea-fefe-1ifzevr']
+
+"Войти" button
+//button[@class='resplash-btn resplash-btn_primary resplash-btn_mailbox-big cea-fefe-ehxscg']
+//div[@class='logged-out-one-click cea-fefe-gzmdja logged-out-one-click_crossnav']/button
+
+"Создать почту" button
+//a[@class='resplash-btn resplash-btn_outlined-themed resplash-btn_mailbox-big cea-fefe-ehxscg']
+//div[@class='footer cea-fefe-1pn6uk5 footer_logged-out']
+
+"Погода" button
+//a[@class='weather__current cea-fefe-fswwb weather__current_animate']
+//img[@class='weather__icon cea-fefe-fswwb']

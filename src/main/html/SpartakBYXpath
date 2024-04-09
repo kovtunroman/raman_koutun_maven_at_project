@@ -1,0 +1,42 @@
+spartak.by Xpathes
+
+Spartak logo
+//img[@alt='логотип Спартак']
+//img[@title='Спартак']
+
+"Информация для партнеров"
+//a[@class='has_child']/span[text()='Информация для партнеров']
+//div/div/div/div/div/ul/li/a[@href='/partners/']/span
+
+Glass button
+//i[@class='search fa search-btn lupa']
+//ul[@class='nav navbar-nav navbar-border-bottom navbar-right list-unstyled hidden-xs hidden-sm']/li/i
+
+Eye button
+//span[@class='header__eye']
+//img[@src='/include/eye.svg']
+
+RU language selector button
+//a[@class='header__lang__item header__lang__item_ru active']
+//div[@class='header__lang']/a[1]
+
+Ch language selector button
+//a[@href='/cn/']
+//div[@class='header__lang']/a[4]
+
+"Скачать каталог"
+//a[contains(text(),'Скачать каталог')]
+//a[@class='download-catalog']
+
+"Импрессо"
+//a[contains(text(),'Импрессо')]
+//a[@href='/products/Impresso/']
+
+VK spartak
+//a[@href='https://vk.com/spartakby']
+//img[@src='/bitrix/templates/our_shop/images/VK.svg']
+
+Youtube spartak
+//a[@href='https://www.youtube.com/channel/UC2xYusMBxs4XkwoPotvTw4A']
+//img[@src='/bitrix/templates/our_shop/images/youtube.svg']
+
