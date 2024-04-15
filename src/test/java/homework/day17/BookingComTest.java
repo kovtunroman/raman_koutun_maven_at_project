@@ -1,5 +1,6 @@
 package homework.day17;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
@@ -116,10 +117,10 @@ public class BookingComTest {
 
     }
 
-//    @After
-//    public void afterBookingComTest() {
-//        driver.quit();
-//    }
+    @After
+    public void afterBookingComTest() {
+        driver.quit();
+    }
 
     private static void findElementExplicitlyWaitClick(WebDriver driver, String by) {
         try {
