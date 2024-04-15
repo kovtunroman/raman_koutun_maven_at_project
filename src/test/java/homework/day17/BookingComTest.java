@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,6 +16,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BookingComTest {
     private final static String WHERE_ARE_YOU_GOING = "//input[@name='ss']";
@@ -33,6 +35,10 @@ public class BookingComTest {
     private final static String SORT_BY_LOW_TO_HIGH = "//span[text()='Property rating (low to high)']";
     private final static String FIRST_CARD_RAITING = "//div[@data-testid='property-card'][1]//div[@data-testid='review-score']/div[1]/div";
     private final static String TENTH_HOTEL_CARD = "//div[@data-testid='property-card'][10]";
+    private final static String CURRANCY_BUTTON = "//button[@data-testid='header-currency-picker-trigger']";
+    private final static String CURRANCY_HINT = "//div[text()='Select your currency']";
+    private final static String LANGUAGE_BUTTON = "//button[@data-testid='header-language-picker-trigger']";
+    private final static String LANGUAGE_HINT = "//div[text()='Select your language']";
 
     private static WebDriver driver;
 
@@ -41,12 +47,12 @@ public class BookingComTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
+        driver.get("https://booking.com");
+        findElementExplicitlyWaitClick(driver, SIGN_IN_ALERT_CLOSE);
     }
 
     @Test
     public void bookingComSearchLondonHotelsChangeTextColorFor10thHotelTakeScereenshot() {
-        driver.get("https://booking.com");
-        findElementExplicitlyWaitClick(driver, SIGN_IN_ALERT_CLOSE);
         driver.findElement(By.xpath(WHERE_ARE_YOU_GOING)).sendKeys("London");
         driver.findElement(By.xpath(LONDON_CITY_SEARCH_OPTION)).click();
 
@@ -67,9 +73,6 @@ public class BookingComTest {
 
     @Test
     public void bookingComSearchForParis4Persons2Rooms6AndMoreRaitingSortByLowToHigh() {
-        driver.get("https://booking.com");
-        findElementExplicitlyWaitClick(driver, SIGN_IN_ALERT_CLOSE);
-
         driver.findElement(By.xpath(WHERE_ARE_YOU_GOING)).sendKeys("Париж, Иль-де-Франс, Франция");
         driver.findElement(By.xpath(PARIS_CITY_SEARCH_OPTION)).click();
 
@@ -115,6 +118,24 @@ public class BookingComTest {
             System.out.println("Something went wrong.");
         }
 
+    }
+
+    @Test
+    public void validateCurrancyHintValue() {
+        WebElement currancyButton = driver.findElement(By.xpath(CURRANCY_BUTTON));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(currancyButton);
+        actions.perform();
+        assertEquals("Value is not correct", driver.findElement(By.xpath(CURRANCY_HINT)).getText(), "Select your currency");
+    }
+
+    @Test
+    public void validateLanguageHintValue() {
+        WebElement languageButton = driver.findElement(By.xpath(LANGUAGE_BUTTON));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(languageButton);
+        actions.perform();
+        assertEquals("Value is not correct", driver.findElement(By.xpath(LANGUAGE_HINT)).getText(), "Select your language");
     }
 
     @After
