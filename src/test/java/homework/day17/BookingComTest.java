@@ -43,7 +43,7 @@ public class BookingComTest {
     private final static String CURRANCY_HINT = "//div[text()='Select your currency']";
     private final static String LANGUAGE_BUTTON = "//button[@data-testid='header-language-picker-trigger']";
     private final static String LANGUAGE_HINT = "//div[text()='Select your language']";
-    private final static String HOTEL_RAITING = "//div[@data-testid='review-score-right-component']/div[1]";
+    private final static String HOTEL_RAITING = "//div[@data-testid='review-score-right-component']/div[1]/div";
 
     private static WebDriver driver;
 
@@ -117,7 +117,7 @@ public class BookingComTest {
             new WebDriverWait(driver, Duration.ofSeconds(5)).until(
                     ExpectedConditions.visibilityOfElementLocated(By.xpath(FIRST_CARD_RAITING))
             );
-            assertEquals("Score is wrong", "Scored 6.0 ", driver.findElement(By.xpath(FIRST_CARD_RAITING)).getText());
+            assertEquals("Score is wrong", "Scored 6.0", driver.findElement(By.xpath(FIRST_CARD_RAITING)).getText());
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         } catch (TimeoutException e) {
             System.out.println("Something went wrong.");
@@ -205,7 +205,7 @@ public class BookingComTest {
         } catch (TimeoutException e) {
             System.out.println("Something went wrong.");
         }
-        assertEquals("Raiting is wrong", "8.7", driver.findElement(By.xpath(HOTEL_RAITING)).getText());
+        assertEquals("Raiting is wrong", "Scored 8.7", driver.findElement(By.xpath(HOTEL_RAITING)).getText());
     }
 
     @After
