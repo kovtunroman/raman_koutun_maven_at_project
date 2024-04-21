@@ -1,4 +1,4 @@
-package classwork.day17;
+package works.classwork.day17;
 
 import org.junit.After;
 import org.junit.Assert;
