@@ -12,6 +12,13 @@ public class Driver {
     protected static DriverConfig config = Optional.ofNullable(System.getProperty("CONFIG")).isEmpty() ?
             DriverConfig.CHROME : DriverConfig.valueOf(System.getProperty("CONFIG"));
 
+    public static WebDriver getDriver(){
+        if(null == driver){
+            driver = getWebDriver();
+        }
+        return  driver;
+    }
+
     private static WebDriver getWebDriver() {
         return switch (config) {
 //            case FF -> getFFDriver();
