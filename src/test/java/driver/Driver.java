@@ -42,4 +42,9 @@ public class Driver {
     private static WebDriver getRemoteDriver(){
         return driver;
     }
+
+    public static void destroy(){
+        driver.quit();
+        driver = null;
+    }
 }

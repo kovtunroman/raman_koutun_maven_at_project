@@ -18,6 +18,8 @@ public abstract class BaseTest {
 
     @AfterClass
     public static void closeDriver() {
-        driver.quit();
+        if(driver instanceof Driver){
+            Driver.destroy();
+        }
     }
 }
