@@ -4,17 +4,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.time.Duration;
 import java.util.Optional;
 import java.util.Collections;
 
 public class Driver {
     public static WebDriver driver;
-    protected static DriverConfig config = Optional.ofNullable(System.getProperty("CONFIG")).isEmpty() ?
-            DriverConfig.CHROME : DriverConfig.valueOf(System.getProperty("CONFIG"));
+    protected static Config config = Optional.ofNullable(System.getProperty("CONFIG")).isEmpty() ?
+            Config.CHROME : Config.valueOf(System.getProperty("CONFIG"));
 
     public static WebDriver getDriver(){
         if(null == driver){
             driver = getWebDriver();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         }
         return  driver;
     }

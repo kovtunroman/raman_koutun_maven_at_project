@@ -9,17 +9,15 @@ import java.time.Duration;
 
 public abstract class BaseTest {
 
-    public static WebDriver driver = Driver.getDriver();
+    public static WebDriver driver;
 
     @BeforeClass
     public static void initDriver() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver = Driver.getDriver();
     }
 
     @AfterClass
     public static void closeDriver() {
-        if(driver instanceof Driver){
-            Driver.destroy();
-        }
+        Driver.destroy();
     }
 }

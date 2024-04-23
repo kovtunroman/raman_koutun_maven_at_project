@@ -1,5 +1,5 @@
 package driver;
 
-public enum DriverConfig {
+public enum Config {
     CHROME, FF, REMOTE
 }
