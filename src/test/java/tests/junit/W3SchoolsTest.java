@@ -1,9 +1,9 @@
-package tests;
+package tests.junit;
 
 import org.junit.Assert;
 import org.junit.Test;
-import pages.GooglePage;
-import pages.W3SchoolsPage;
+import pages.google.GooglePage;
+import pages.w3schools.W3SchoolsPage;
 
 public class W3SchoolsTest extends BaseTest {
     @Test

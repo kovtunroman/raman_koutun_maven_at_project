@@ -21,8 +21,8 @@ public class Driver {
 
     private static WebDriver getWebDriver() {
         return switch (config) {
-//            case FF -> getFFDriver();
-//            case REMOTE -> getRemoteDriver();
+            case FF -> getFFDriver();
+            case REMOTE -> getRemoteDriver();
             default -> getChromeDriver();
         };
     }
@@ -33,5 +33,13 @@ public class Driver {
         caps.addArguments("disable-infobars");
         caps.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         return new ChromeDriver(caps);
+    }
+
+    private static WebDriver getFFDriver(){
+        return driver;
+    }
+
+    private static WebDriver getRemoteDriver(){
+        return driver;
     }
 }

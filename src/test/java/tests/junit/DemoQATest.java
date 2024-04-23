@@ -1,10 +1,9 @@
-package tests;
+package tests.junit;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pages.BasePage;
-import pages.DemoQAPage;
+import pages.demoqa.DemoQAPage;
 
 public class DemoQATest extends BaseTest {
     DemoQAPage demoQAPage;

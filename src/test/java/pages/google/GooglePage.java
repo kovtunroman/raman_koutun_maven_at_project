@@ -1,16 +1,17 @@
-package pages;
+package pages.google;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import pages.BasePage;
 
 import java.util.List;
 
 
 public class GooglePage extends BasePage {
-    final static String url = "https://google.com";
+    private final static String url = "https://google.com";
     final static String SEARCH_FIELD = "//textarea[@name='q']";
     final static String CHANGE_TO_ENGLISH = "//a[text()='Change to English']";
     final static String SEARCH_RESULTS = "//div/h1[text()='Search Results']/../div/div";

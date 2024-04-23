@@ -1,14 +1,15 @@
-package pages;
+package pages.demoqa;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import pages.BasePage;
 
 import static org.junit.Assert.assertTrue;
 
 public class DemoQAPage extends BasePage {
-    final static String url = "https://demoqa.com/select-menu";
+    private final static String url = "https://demoqa.com/select-menu";
     private final static String COLOR_SELECTOR = "//select[@id='oldSelectMenu']";
     private final static String CAR_SELECTOR = "//select[@name='cars']";
 
