@@ -16,11 +16,6 @@ public class GooglePage extends BasePage {
     final static String CHANGE_TO_ENGLISH = "//a[text()='Change to English']";
     final static String SEARCH_RESULTS = "//div/h1[text()='Search Results']/../div/div";
 
-    public GooglePage(WebDriver driver) {
-        super(driver);
-    }
-
-    @Override
     public void open() {
         super.open(url);
     }

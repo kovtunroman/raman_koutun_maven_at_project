@@ -1,8 +1,10 @@
+package works.homework.day16;
+
 import org.example.classwork.day13.ClassWithMethodToTest;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-public class methodTestsJUnit {
+public class MethodTestsJUnit {
     @Test
     public void caseOneFirstBranch(){
         System.out.println("Case 1: 1st branch + Cond1 true + Cond2 ture + " +

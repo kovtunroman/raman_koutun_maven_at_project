@@ -13,11 +13,6 @@ public class DemoQAPage extends BasePage {
     private final static String COLOR_SELECTOR = "//select[@id='oldSelectMenu']";
     private final static String CAR_SELECTOR = "//select[@name='cars']";
 
-    public DemoQAPage(WebDriver driver) {
-        super(driver);
-    }
-
-    @Override
     public void open() {
         super.open(url);
     }

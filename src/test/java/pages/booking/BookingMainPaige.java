@@ -37,11 +37,6 @@ public class BookingMainPaige extends BasePage {
     private final static String LANGUAGE_HINT = "//div[text()='Select your language']";
     private final static String HOTEL_RAITING = "//div[@data-testid='review-score-right-component']/div[1]/div";
 
-    public BookingMainPaige(WebDriver driver) {
-        super(driver);
-    }
-
-    @Override
     public void open() {
         super.open(url);
     }

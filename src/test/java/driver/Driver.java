@@ -9,8 +9,8 @@ import java.util.Optional;
 import java.util.Collections;
 
 public class Driver {
-    public static WebDriver driver;
-    protected static Config config = Optional.ofNullable(System.getProperty("CONFIG")).isEmpty() ?
+    private static WebDriver driver;
+    private static Config config = Optional.ofNullable(System.getProperty("CONFIG")).isEmpty() ?
             Config.CHROME : Config.valueOf(System.getProperty("CONFIG"));
 
     public static WebDriver getDriver(){

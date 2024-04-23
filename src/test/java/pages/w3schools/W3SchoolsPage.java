@@ -11,11 +11,6 @@ public class W3SchoolsPage extends BasePage {
     private final static String url = "https://w3schools.com/java";
     private final static String TITLE_WITH_TUTORIAL = "//*[text()='Tutorial']";
 
-    public W3SchoolsPage(WebDriver driver) {
-        super(driver);
-    }
-
-    @Override
     public void open() {
         super.open(url);
     }

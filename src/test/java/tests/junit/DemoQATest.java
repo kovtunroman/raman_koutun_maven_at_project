@@ -7,11 +7,10 @@ import org.junit.Test;
 import pages.demoqa.DemoQAPage;
 
 public class DemoQATest extends BaseTest {
-    DemoQAPage demoQAPage;
+    DemoQAPage demoQAPage = new DemoQAPage();
 
     @Before
     public void openPage(){
-        demoQAPage = new DemoQAPage(driver);
         demoQAPage.open();
     }
 

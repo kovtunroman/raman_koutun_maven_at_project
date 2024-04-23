@@ -9,15 +9,8 @@ import java.time.Duration;
 
 public abstract class BaseTest {
 
-    public static WebDriver driver;
-
-    @BeforeClass
-    public static void initDriver() {
-        driver = Driver.getDriver();
-    }
-
     @AfterClass
-    public static void closeDriver() {
+    public static void tearDown() {
         Driver.destroy();
     }
 }
